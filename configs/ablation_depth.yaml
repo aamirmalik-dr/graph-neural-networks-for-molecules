@@ -1,0 +1,15 @@
+# Message-passing depth ablation: same MPNN, sweeping the number of layers.
+# All other settings are shared and seeded, so only depth varies.
+name: MPNN-depth
+model: mpnn
+dataset: esol
+csv: data/esol_sample.csv
+epochs: 200
+batch_size: 32
+lr: 0.001
+weight_decay: 0.0
+hidden_dim: 64
+patience: 25
+seed: 0
+split: [0.8, 0.1, 0.1]
+num_layers: [1, 2, 3, 4]

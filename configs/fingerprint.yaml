@@ -1,0 +1,11 @@
+# Morgan-fingerprint MLP baseline on the ESOL solubility sample.
+name: FingerprintMLP
+model: fingerprint
+dataset: esol
+csv: data/esol_sample.csv
+epochs: 200
+lr: 0.001
+hidden_dim: 256
+n_bits: 1024
+seed: 0
+split: [0.8, 0.1, 0.1]

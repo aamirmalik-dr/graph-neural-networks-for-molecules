@@ -1,0 +1,14 @@
+# Graph convolutional network on the ESOL solubility sample.
+name: GCN
+model: gcn
+dataset: esol
+csv: data/esol_sample.csv
+epochs: 200
+batch_size: 32
+lr: 0.001
+weight_decay: 0.0
+hidden_dim: 64
+num_layers: 3
+patience: 25
+seed: 0
+split: [0.8, 0.1, 0.1]

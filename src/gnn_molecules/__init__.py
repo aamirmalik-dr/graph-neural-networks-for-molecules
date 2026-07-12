@@ -7,6 +7,12 @@ network with symmetric adjacency normalization, and a Morgan-fingerprint MLP
 baseline. Graphs are built from SMILES with RDKit.
 """
 
+from gnn_molecules.config import (
+    AblationConfig,
+    ExperimentConfig,
+    load_ablation,
+    load_config,
+)
 from gnn_molecules.data import (
     MolGraphDataset,
     collate_graphs,
@@ -14,10 +20,15 @@ from gnn_molecules.data import (
     random_split,
     rdkit_property_dataset,
 )
+from gnn_molecules.experiment import (
+    ExperimentResult,
+    run_ablation,
+    run_experiment,
+)
 from gnn_molecules.featurize import atom_features, bond_features, mol_to_graph
 from gnn_molecules.layers import GCNLayer, MPNNConv, scatter_mean, scatter_sum
 from gnn_molecules.models import GCN, MPNN, FingerprintMLP
-from gnn_molecules.train import Trainer, regression_metrics, set_seed
+from gnn_molecules.train import MetricsLogger, Trainer, regression_metrics, set_seed
 
 __all__ = [
     "mol_to_graph",
@@ -36,8 +47,16 @@ __all__ = [
     "GCN",
     "FingerprintMLP",
     "Trainer",
+    "MetricsLogger",
     "regression_metrics",
     "set_seed",
+    "ExperimentConfig",
+    "AblationConfig",
+    "load_config",
+    "load_ablation",
+    "ExperimentResult",
+    "run_experiment",
+    "run_ablation",
 ]
 
 __version__ = "0.1.0"
