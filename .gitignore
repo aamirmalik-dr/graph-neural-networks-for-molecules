@@ -16,11 +16,21 @@ env/
 .coverage
 htmlcov/
 
-# Data and generated artifacts (fetched or produced locally, never committed)
+# Data: ignore the full downloaded set, but commit the small carved sample.
 data/*
 !data/README.md
-results/
-*.pt
+!data/esol_sample.csv
+
+# Generated artifacts: commit the small benchmark outputs, ignore anything else.
+results/*
+!results/metrics.json
+!results/parity.png
+!results/training_curves.png
+!results/ablation.png
+!results/mpnn.pt
+!results/training_log_mpnn.json
+
+# Other checkpoints stay ignored.
 *.pth
 *.pth.tar
 *.ckpt
