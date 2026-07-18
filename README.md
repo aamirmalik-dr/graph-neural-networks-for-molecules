@@ -1,4 +1,4 @@
-# Graph neural networks for molecules
+# graph-neural-networks-for-molecules
 
 *Origin: Originally developed for the Machine Learning for Molecules and Materials course at KAIST (Spring 2022); refactored and open-sourced in July 2026.*
 
