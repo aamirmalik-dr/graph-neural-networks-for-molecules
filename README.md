@@ -1,5 +1,7 @@
 # Graph neural networks for molecules
 
+*Origin: Originally developed for the Machine Learning for Molecules and Materials course at KAIST (Spring 2022); refactored and open-sourced in July 2026.*
+
 Message passing neural networks for molecular property prediction, written from
 scratch in PyTorch with no graph-learning framework. Config-driven benchmark
 lab: every run is one YAML file, seeds are fixed, results are committed.
